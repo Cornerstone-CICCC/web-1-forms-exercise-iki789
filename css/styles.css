@@ -13,4 +13,22 @@ form {
   margin: 20px auto;
 }
 
+fieldset {
+  border: 1px solid #c2c2c2;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  float: none;
+  width: auto;
+  padding: 0 0.75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  border: 1px solid #c2c2c2;
+  border-radius: 0.5rem;
+  line-height: inherit;
+}
+
 /*# sourceMappingURL=styles.css.map */
