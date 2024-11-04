@@ -32,6 +32,7 @@
             type="email"
             name="email"
             id="email"
+            required
             pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
           />
         </div>
@@ -41,6 +42,7 @@
           <input
             class="form-control"
             name="password"
+            minlength="12"
             type="password"
             id="password"
           />
@@ -56,18 +58,39 @@
         <legend>Preferences</legend>
         <div class="mb-3">
           <label for="color">Color: </label>
-          <input type="color" class="form-control" name="color" value="" />
+          <input
+            type="color"
+            class="form-control"
+            name="color"
+            id="color"
+            value=""
+          />
         </div>
         <div class="mb-3">
-          <label for="color">Hobby: </label>
-          <input type="text" class="form-control" name="hobby" value="" />
+          <label for="hobby">Hobby: </label>
+          <input
+            type="text"
+            class="form-control"
+            name="hobby"
+            id="hobby"
+            value=""
+            list="hobby-list"
+          />
+          <datalist id="hobby-list">
+            <option value="Gaming">Gaming</option>
+            <option value="Archery">Archery</option>
+            <option value="Bundgy Jumping">Bundgy Jumping</option>
+            <option value="Snowboarding">Snowboarding</option>
+            <option value="Gliding">Gliding</option>
+          </datalist>
         </div>
         <div class="mb-3">
-          <label for="color">Experience Level: </label> <br />
+          <label for="experienceLvl">Experience Level: </label> <br />
           <input
             type="range"
             class="form-range"
             max="10"
+            id="experienceLvl"
             name="experienceLvl"
             style="max-width: 120px"
           />
@@ -78,7 +101,11 @@
         <legend>Contact Preferences</legend>
         <div class="mb-3">
           <label for="preferredMethod">Preferred Contact Method</label>
-          <select name="preferredMethod" class="form-select">
+          <select
+            name="preferredMethod"
+            class="form-select"
+            id="preferredMethod"
+          >
             <option value="Email" selected>Email</option>
             <option value="Phone" selected>Phone</option>
           </select>
@@ -138,8 +165,13 @@
       <fieldset>
         <legend>More Information</legend>
         <div class="mb-3">
-          <label>Bio:</label>
-          <textarea class="form-control" name="bio" rows="5"></textarea>
+          <label for="bio">Bio:</label>
+          <textarea
+            class="form-control"
+            name="bio"
+            id="bio"
+            rows="5"
+          ></textarea>
         </div>
       </fieldset>
 
