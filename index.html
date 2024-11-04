@@ -13,12 +13,16 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <form enctype="multipart/form-data" action="index.html" method="GET">
+    <form
+      enctype="multipart/form-data"
+      action="https://formtester.goodbytes.be/post.php"
+      method="POST"
+    >
       <fieldset>
         <legend>Personal Information</legend>
         <div class="mb-3">
           <label for="name">Name:</label>
-          <input class="form-control" type="name" id="name" />
+          <input class="form-control" type="name" name="name" id="name" />
         </div>
 
         <div class="mb-3">
@@ -26,6 +30,7 @@
           <input
             class="form-control"
             type="email"
+            name="email"
             id="email"
             pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
           />
@@ -33,12 +38,17 @@
 
         <div class="mb-3">
           <label for="password">Password:</label>
-          <input class="form-control" type="password" id="password" />
+          <input
+            class="form-control"
+            name="password"
+            type="password"
+            id="password"
+          />
         </div>
 
         <div class="mb-3">
           <label for="dob">Date of Birth:</label>
-          <input class="form-control" type="date" id="dob" />
+          <input class="form-control" name="dob" type="date" id="dob" />
         </div>
       </fieldset>
 
@@ -50,7 +60,7 @@
         </div>
         <div class="mb-3">
           <label for="color">Hobby: </label>
-          <input type="text" class="form-control" name="hobby" value="#000" />
+          <input type="text" class="form-control" name="hobby" value="" />
         </div>
         <div class="mb-3">
           <label for="color">Experience Level: </label> <br />
@@ -137,7 +147,7 @@
         <legend>Upload Documents</legend>
         <div class="mb-3">
           <label>Resume and other certificates</label> <br />
-          <input type="file" accept=".pdf" />
+          <input type="file" name="file" accept=".jpg" />
         </div>
       </fieldset>
 
